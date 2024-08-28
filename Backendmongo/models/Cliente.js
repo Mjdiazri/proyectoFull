@@ -17,6 +17,7 @@ const clienteSchema = mongoose.Schema({
     documento: {
         type: Number,
         required: true,
+        unique: true,
     },
 
     correo: {
