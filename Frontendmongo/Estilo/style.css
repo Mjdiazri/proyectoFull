@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+
+:root{
+    --fuentePrincipal: "Matemasie", sans-serif;
+    --colorGreen: rgba(69,252,181);
+    --colorDark: rgb(14, 7, 75); 
+    --colorPink: rgb(232, 10, 191);
+    --colorBlue: rgb(9, 16, 148);
+    --colorDegrade: 
+    
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -7,9 +19,10 @@
 .contenedor{
     display: flex;
     flex-direction: row;
-    background: linear-gradient(90deg, rgba(58,65,180,1) 7%, rgba(253,29,220,0.850577731092437) 56%, rgba(69,252,181,1) 82%);
+    background: linear-gradient(90deg, rgb(9, 16, 148) 7%, rgba(253,29,220,0.850577731092437) 56%, rgba(69,252,181,1) 82%);
     width: 100%;
-    height: 10em;    
+    height: 8em;    
+    
 }
 
 .empresa{
@@ -17,4 +30,71 @@
     flex-direction: row;
     justify-content:left;
     align-items: center;
+    padding-left: 2em;
+    gap:10px;
+}
+
+img{
+    width: 6em;
+    height: auto;
+}
+
+.brand{
+    font-family: var(--fuentePrincipal);
+    font-size: 2.5em;
+    color: var(--colorDark);
+    -webkit-text-stroke-color:var(--colorGreen);
+    -webkit-text-stroke-width: 0.01px;
+}
+
+span{
+    -webkit-text-stroke-color:var(--colorPink);
+    -webkit-text-stroke-width: 0.01px;
+}
+
+.navegador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30em;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+a{
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--colorBlue);    
+}
+
+a:hover{
+    transform: scale(1.2);
+    font-weight: 600;
+    color: white;
+    text-shadow: 
+        1px 1px 2px black,
+        0 0 1em var(--colorPink),
+        0 0 0.2em var(--colorPink);
+}
+
+main{
+  height: 30em;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(9, 16, 148) 7%, rgba(253,29,220,0.850577731092437) 56%, rgba(69,252,181,1) 82%);
+    height: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
