@@ -81,12 +81,13 @@ a:hover{
     color: white;
     text-shadow: 
         1px 1px 2px black,
-        0 0 1em var(--colorPink),
-        0 0 0.2em var(--colorPink);
+        0 0 1em var(--colorBlue),
+        0 0 0.2em var(--colorBlue);
 }
 
 main{
-  height: 35em;
+  height: auto;
+  margin: 10px;
 }
 
 footer{
