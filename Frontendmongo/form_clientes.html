@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<header>
-    <link rel="stylesheet" href="./Estilo/styleIndex.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Estilo/styleIndex.css" />
+    <link rel="stylesheet" href="./Estilo/styleClientes.css">
+    <title>Document</title>
+  </head>
+  <body>
     <header>
-        <div class="contenedor">
-          <div class="empresa">
-            <img src="./Estilo/imagenes/book-open-check.png" alt="Imagen libro" />
-            <h3 class="brand">BOO<span>KEND</span></h3>
-          </div>
-          <div class="navegador">
-            <nav class="nav">
-              <a class="inicio" href="./index.html">Inicio</a>
-              <a class="clientes" href="./clientes.html">clientes</a>
-              <a class="productos" href="">Productos</a>
-            </nav>
-          </div>
+      <div class="contenedor">
+        <div class="empresa">
+          <img src="./Estilo/imagenes/book-open-check.png" alt="Imagen libro" />
+          <h3 class="brand">BOO<span>KEND</span></h3>
         </div>
-      </header>
+        <div class="navegador">
+          <nav class="nav">
+            <a class="inicio" href="./index.html">Inicio</a>
+            <a class="clientes" href="./clientes.html">clientes</a>
+            <a class="productos" href="">Productos</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="subcontenedor">
+          <h2>Formulario <span>de</span> Clientes</span></h2>
+        </div>
+        <div class="row">
+          <form action="" class="formulario" onsubmit="" method="POST">
+            <div class="sub-uno">
+              <label for="nombres" class="fomulario-label">Nombres</label>
+              <input type="text" class="fomulario-input" name="nombres-n" id="nombres-n">
+            </div>
+
+            <div class="sub-dos">
+              <label for="apellidos" class="fomulario-label">Apellidos</label>
+              <input type="text" class="fomulario-input" name="apellidos-a" id="apellidos-a">
+            </div>
+
+            <div class="sub-tres">
+              <label for="documento" class="fomulario-label">Documento</label>
+              <input type="number" class="fomulario-input" name="documento-d" id="documento-d">
+            </div>
+
+            <div class="sub-cuatro">
+              <label for="correo" class="fomulario-label">Correo</label>
+              <input type="text" class="fomulario-input" name="correo-c" id="correo-c">
+            </div>
+
+            <div class="sub-cinco">
+              <label for="telefono" class="fomulario-label">Telefono</label>
+              <input type="number" class="fomulario-input" name="telefono-t" id="telefono-t">
+            </div>
+
+            <div class="sub-seis">
+              <label for="direccion" class="fomulario-label">Direccion</label>
+              <input type="text" class="fomulario-input" name="direccion-d" id="direccion-d">
+            </div>
+
+            <button type="button" class="boton" onclick="guardarClientes()">Guardar</button>
+
+          </form>
+        </div>
+        
+      </section>
+    </main>
     <footer>
-        <p>Bookend &copy; Monica Jazmin Diaz 2024</p>
-    </footer>
-</body>
+      <p>Bookend &copy; Monica Jazmin Diaz 2024</p>
+  </footer>
+
+  <script src="./js/request.js"></script>
+  <script src="./js/clientes.js"></script>
+  <script>
+    window.onload = function(){
+      mostrarDatos();
+    }
+  </script>
+
+  </body>
 </html>
