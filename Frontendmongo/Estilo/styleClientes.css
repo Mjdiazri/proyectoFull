@@ -1,0 +1,72 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subcontenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    height: 7em;
+    width: 100%;
+    margin: 1em;
+    padding: 1em;
+    gap: 1em;
+}
+
+h2{
+    font-family: cursive;
+    font-size: 1.5em;
+    font-weight:900;
+    color: var(--colorBlue);
+    text-shadow: 1px 1px var(--colorGreen);    
+}
+
+.boton{
+    background-color: white;
+    color: purple;
+    padding: 5px;
+    border: 1px purple solid;
+    border-radius: 3px;   
+    font-size: 0.8em;
+}
+
+.boton:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 2px 10px purple ;
+}
+
+.tabla{
+    margin: 0.5rem 10rem 5rem 6rem ;
+    padding: 0.5rem;
+    background-color:var(--colorGreen);
+    border: var(--colorGreen) solid 2px;
+    font-family: cursive;   
+    gap: 10px 10px ; 
+}
+
+table{
+    border-collapse: collapse;
+}
+th{
+    padding: 10px;
+    margin: 5px;
+    background-color:var(--colorBlue) ;
+    border: white solid 2px ;
+    border-collapse: collapse;
+    color: rgba(236, 168, 236, 0.966);
+}
+
+td{
+    padding: 10px;
+    margin: 5px;
+    border:purple solid 2px ;
+    border-collapse: collapse; 
+}
+
+table tr:nth-child(even) td {
+    background-color: rgba(15, 15, 130, 0.265);
+}
