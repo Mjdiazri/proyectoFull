@@ -27,41 +27,36 @@
     <main>
       <section class="container">
         <div class="subcont">
-          <h2>Formulario <span>de</span> Clientes</span></h2>
+          <h2>Formulario <span>de</span> Productos</span></h2>
         </div>
         <div class="row">
           <form action="" class="formulario" onsubmit="" method="POST">
-            <div class="sub uno">
-              <label for="nombres" class="fomulario-label">Nombres</label>
-              <input type="text" class="fomulario-input" name="nombres-n" id="nombres-n">
+            <div class="sub unop">
+              <label for="nombre" class="fomulario-label">Nombre</label>
+              <input type="text" class="fomulario-input" name="nombre-n" id="nombre-n">
             </div>
 
-            <div class="sub dos">
-              <label for="apellidos" class="fomulario-label">Apellidos</label>
-              <input type="text" class="fomulario-input" name="apellidos-a" id="apellidos-a">
+            <div class="sub dosp">
+              <label for="identificador" class="fomulario-label">Identificador</label>
+              <input type="number" class="fomulario-input" name="identificador-i" id="identificador-i">
             </div>
 
-            <div class="sub tres">
-              <label for="documento" class="fomulario-label">Documento</label>
-              <input type="number" class="fomulario-input" name="documento-d" id="documento-d">
+            <div class="sub tresp">
+              <label for="autor" class="fomulario-label">Autor</label>
+              <input type="text" class="fomulario-input" name="autor-a" id="autor-a">
             </div>
 
-            <div class="sub cuatro">
-              <label for="correo" class="fomulario-label">Correo</label>
-              <input type="text" class="fomulario-input" name="correo-c" id="correo-c">
+            <div class="sub cuatrop">
+              <label for="editorial" class="fomulario-label">Editorial</label>
+              <input type="text" class="fomulario-input" name="editorial-e" id="editorial-e">
             </div>
 
-            <div class="sub cinco">
-              <label for="telefono" class="fomulario-label">Telefono</label>
-              <input type="number" class="fomulario-input" name="telefono-t" id="telefono-t">
+            <div class="sub cincop">
+              <label for="cantidad" class="fomulario-label">Cantidad</label>
+              <input type="number" class="fomulario-input" name="cantidad-c" id="cantidad-c">
             </div>
 
-            <div class="sub seis">
-              <label for="direccion" class="fomulario-label">Direccion</label>
-              <input type="text" class="fomulario-input" name="direccion-d" id="direccion-d">
-            </div>
-
-            <button type="button" class="boton" onclick="guardarClientes()">Guardar</button>
+            <button type="button" class="boton" onclick="guardarProductos()">Guardar</button>
 
           </form>
         </div>
@@ -72,10 +67,10 @@
   </footer>
 
   <script src="./js/request.js"></script>
-  <script src="./js/clientes.js"></script>
+  <script src="./js/productos.js"></script>
   <script>
     window.onload = function(){
-      mostrarDatos();
+      mostrarDatosP();
     }
   </script>
 

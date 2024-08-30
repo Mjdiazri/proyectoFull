@@ -3,7 +3,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(22, 13, 83);
+    background: radial-gradient(circle, rgba(0,212,255,1) 15%, rgba(9,9,121,1) 51%, rgba(2,0,36,1) 100%);
     margin: 10px;
 }
 
@@ -52,6 +52,12 @@ main{
     font-weight: 600;
 }
 
+
+.fomulario-input{
+    border: 1px solid var(--colorBlue);
+    box-shadow: 0.5px 1px 10px var(--colorBlue);
+}
+
 .sub{
     display: flex;
     flex-direction: row;
@@ -78,7 +84,18 @@ main{
     gap:1.8em;
 }
 
-.fomulario-input{
-    border: 1px solid var(--colorBlue);
-    box-shadow: 0.5px 1px 10px var(--colorBlue);
+.unop{
+    gap: 3.2em;
+}
+
+.dosp{
+    gap: 0.5em;
+}
+
+.tresp{
+    gap: 4.3em;
+}
+
+.cuatrop, .cincop{
+    gap:3em;
 }

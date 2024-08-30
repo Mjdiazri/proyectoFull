@@ -64,6 +64,7 @@ td{
     margin: 5px;
     border:purple solid 2px ;
     border-collapse: collapse; 
+    font-size: 12px;
 }
 
 table tr:nth-child(even) td {
@@ -82,3 +83,6 @@ button:hover{
     background-color: purple;
     color: white;
 }
+
+
+

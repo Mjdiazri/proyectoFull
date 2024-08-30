@@ -26,28 +26,28 @@
     <main>
       <section class="container">
         <div class="subcontenedor">
-          <h2>Base De Datos De Clientes</h2>
+          <h2>Base De Datos De Productos</h2>
           <button
             class="boton agregar"
-            onclick="window.location ='form_clientes.html'"
+            onclick="window.location ='form_productos.html'"
           >
-            Agregar Cliente
+            Agregar Producto
           </button>
         </div>
         <table class="table">
           <thead>
             <tr class="table-primary">
               <th scope="col">Id</th>
-              <th scope="col">Nombres</th>
-              <th scope="col">Apellidos</th>
-              <th scope="col">Documento</th>
-              <th scope="col">Correo</th>
-              <th scope="col">Telefono</th>
-              <th scope="col">Direccion</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Identificador</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Editorial</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Fecha de ingreso</th>
               <th scope="col">Acciones</th>
             </tr>
           </thead>
-          <tbody id="clientes-table">
+          <tbody id="productos-table">
             <tr>
               <th scope="row">1</th>
               <td>Mark</td>
@@ -74,10 +74,10 @@
   </footer>
 
   <script src="./js/request.js"></script>
-  <script src="./js/clientes.js"></script>
+  <script src="./js/productos.js"></script>
   <script>
     window.onload = function(){
-      mostrarDatos();
+      mostrarDatosP();
     }
   </script>
 
