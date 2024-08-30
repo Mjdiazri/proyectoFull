@@ -16,7 +16,7 @@ function mostrarDatos(){
             <td>${element.telefono}</td>
             <td>${element.direccion}</td>
             <td>
-                <button type:"button" class:"boton accion" onclick='window.location = "../form_clientes.html?id${element._id}"' >Editar 🖊</button>
+                <button type:"button" class:"boton accion" onclick='window.location="./form_clientes.html?id=${element._id}"'>Editar 🖊</button>
                 <button type:"button" class:"boton accion" onclick= 'deleteClientes("${element._id}")' >Eliminar 🗑</button>
             </td>
 
@@ -60,3 +60,48 @@ function guardarClientes(){
     }
 }
 
+
+
+function cargarDatos(id){
+    let request = sendRequest('clientes/'+id,'GET','')
+    let nom = document.getElementById('nombres-n')
+    let ape = document.getElementById('apellidos-a')
+    let doc = document.getElementById('documento-d')
+    let cor = document.getElementById('correo-c')
+    let tel = document.getElementById('telefono-t')
+    let dir = document.getElementById('direccion-d')
+
+    request.onload = function(){
+
+        let data = request.response
+        nom.value = data.nombres
+        ape.value = data.apellidos
+        doc.value = data.documento
+        cor.value = data.correo
+        tel.value = data.telefono
+        dir.value = data.direccion
+        console.log(data);
+    }
+    request.onerror = function(){
+        alert('Error al cargar los datos')
+    }
+}
+
+
+function modificarClientes(id){
+    let nom = document.getElementById('nombres-n').value;
+    let ape = document.getElementById('apellidos-a').value;
+    let doc = document.getElementById('documento-d').value;
+    let cor = document.getElementById('correo-c').value;
+    let tel = document.getElementById('telefono-t').value;
+    let dir = document.getElementById('direccion-d').value;
+    let data = {'nombres':nom, 'apellidos': ape, 'documento': doc,'correo': cor, 'telefono': tel, 'direccion': dir};
+
+    let request = sendRequest('clientes/'+id,'PATCH', data);
+    request.onload = function(){
+        window.location= 'clientes.html';
+    }
+    request.onerror = function(){
+        alert('Error al guardar los datos')
+    }
+}

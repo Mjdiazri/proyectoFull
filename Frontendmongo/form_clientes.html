@@ -62,7 +62,7 @@
             </div>
 
             <button type="button" class="boton" onclick="guardarClientes()">Guardar</button>
-
+            <button type="button" class="boton" id="btn-editar">Editar</button>
           </form>
         </div>
       </section>
@@ -73,9 +73,18 @@
 
   <script src="./js/request.js"></script>
   <script src="./js/clientes.js"></script>
+
   <script>
     window.onload = function(){
-      mostrarDatos();
+      let boton= document.getElementById('btn-editar');
+
+      const url = new URLSearchParams(window.location.search);        
+        cargarDatos(url.get('id'));
+      
+        boton.onclick=()=>{
+        modificarClientes(url.get('id'));
+      }    
+    
     }
   </script>
 
