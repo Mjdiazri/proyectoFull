@@ -56,7 +56,10 @@
               <input type="number" class="fomulario-input" name="cantidad-c" id="cantidad-c">
             </div>
 
+            <div class="sub seisp">
             <button type="button" class="boton" onclick="guardarProductos()">Guardar</button>
+            <button type="button" id="btn-editarp" class="boton" onclick="editarProductos()">Editar</button>
+          </div>
 
           </form>
         </div>
@@ -68,11 +71,19 @@
 
   <script src="./js/request.js"></script>
   <script src="./js/productos.js"></script>
-  <!--<script>
+  <script>
     window.onload = function(){
-      mostrarDatosP();
+      let boton= document.getElementById('btn-editarp');
+
+      const url = new URLSearchParams(window.location.search);        
+        cargarDatosP(url.get('id'));
+      
+        boton.onclick=()=>{
+        modificarProductos(url.get('id'));
+      }    
+    
     }
-  </script>-->
+  </script>
 
   </body>
 </html>

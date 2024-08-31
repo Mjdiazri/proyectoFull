@@ -84,6 +84,15 @@ main{
     gap:1.8em;
 }
 
+.siete{
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.boton{
+    width: 8em;
+}
+
 .unop{
     gap: 3.2em;
 }
@@ -98,4 +107,13 @@ main{
 
 .cuatrop, .cincop{
     gap:3em;
+}
+
+.seisp{
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.boton{
+    width: 8em;
 }

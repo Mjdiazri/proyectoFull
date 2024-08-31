@@ -16,7 +16,7 @@ function mostrarDatosP(){
             <td>${element.cantidad}</td>
             <td>${element.fecha_ingreso}</td>
             <td>
-                <button type:"button" class:".boton" onclick='window.location = "../form_productos.html?id${element._id}"' >🖊</button>
+                <button type:"button" class:".boton" onclick='window.location = "./form_productos.html?id=${element._id}"' >🖊</button>
                 <button type:"button" class:".boton" onclick= 'deleteProductos("${element._id}")' >🗑</button>
             </td>
 
@@ -60,3 +60,44 @@ function guardarProductos(){
     }
 }
 
+function cargarDatosP(id){
+    let request = sendRequest('productos/'+id,'GET','')
+    let nomb = document.getElementById('nombre-n')
+    let ide = document.getElementById('identificador-i')
+    let aut = document.getElementById('autor-a')
+    let edi = document.getElementById('editorial-e')
+    let can = document.getElementById('cantidad-c')
+
+    request.onload = function(){
+
+        let data = request.response
+        nomb.value = data.nombre
+        ide.value = data.identificador
+        aut.value = data.autor
+        edi.value = data.editorial
+        can.value = data.cantidad
+   
+        console.log(data);
+    }
+    request.onerror = function(){
+        alert('Error al cargar los datos')
+    }
+}
+
+function modificarProductos(id){
+    let nomb = document.getElementById('nombre-n').value;
+    let ide = document.getElementById('identificador-i').value;
+    let aut = document.getElementById('autor-a').value;
+    let edi = document.getElementById('editorial-e').value;
+    let can = document.getElementById('cantidad-c').value;
+
+    let data = {'nombre':nomb, 'identificador': ide, 'autor': aut,'editorial': edi, 'cantidad': can};
+
+    let request = sendRequest('productos/'+id,'PATCH', data);
+    request.onload = function(){
+        window.location= 'productos.html';
+    }
+    request.onerror = function(){
+        alert('Error al guardar los datos')
+    }
+}
