@@ -25,16 +25,24 @@
     <main>
         <div class="cuerpo">
             <div class="presentacion">
-                <h4 class="tit">Sistema de informacion SiBook</h4>
-                <p>Bienvenido al sistema de informacion de &copy; Bookend S.A </p>
-                <p>A traves de esta aplicacion  podras gestionar la informacion de clientes y productos, mediante acciones de registro,  eliminacion, edicion y consulta de los datos en nuestra organizacion</p>
+                <div class="libroimg">
+                    <img src="./Estilo/imagenes/libro.PNG" class="openbook" alt="Libro con letras">
+                </div>
+                <div class="letter">
+                    <h4 class="tit">Sistema de informacion</h4>
+                    <h4 class="titname">S i B o o k</h4>
+                    <p class="greet">Bienvenid@ al sistema de informacion de <span class="marca"> &copy; Bookend</span> </p>
+                    <p>A través de esta aplicación  podras gestionar la información de clientes y productos, mediante acciones de registro,  eliminación, edición y consulta de los datos.</p>
+                </div>
+                
             </div>
             <div class="subcuerpo">
-                <div class="gestion clientes">
-                    <h4>Gestionar Clientes</h4>
+                <div class="div-clientes">
+                    <button class="boton-clientes" type="button" onclick="window.location = './clientes.html'"
+                    >Gestionar Clientes </button>
                 </div>
-                <div class="gestion productos">
-                    <h4>Gestionar Productos</h4>
+                <div class="div-productos">
+                   <button class="boton-productos" type="button" onclick="window.location = './productos.html'">Gestionar Productos</button>
                 </div>
             </div>
         </div>

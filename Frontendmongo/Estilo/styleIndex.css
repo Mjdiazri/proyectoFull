@@ -101,27 +101,120 @@ main{
 
 .presentacion{
     width: 70%;
-    height: 27em;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    background: linear-gradient(110deg, rgba(255,255,255,1) 45%, rgba(17,171,202,1) 96%, rgba(219,17,219,1) 100%);
+    gap: 1px;
+    background-color: black;
+
+}
+
+.openbook{
+    height: 25em;
+    width: auto;
+    opacity: 0.8;
+}
+
+.letter{
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+.tit{
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 2.5em;    
+    color: black;
+    
+    text-shadow: 
+        1px 1px 2px black,
+        0 0 1em  rgba(17,171,202,1),
+        0 0 0.2em  rgba(17,171,202,1);
+    text-align:center;    
+}
+
+.titname{
+    font-family: var(--fuentePrincipal);
+    font-size: 4em;
+    font-weight: bolder;
+    -webkit-text-stroke-color: var(--colorGreen);
+    -webkit-text-stroke-width: 0.01px;
+}
+
+.greet{
+    font-family: cursive;
+    font-size: 1.2em;
+}
+
+.marca{
+    font-family: var(--fuentePrincipal);
+    -webkit-text-stroke-color: var(--colorPink);
+    -webkit-text-stroke-width: 0.5px;
+}
+
+p{
+    width: 38em;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.7em;
+}
+
+.subcuerpo{
+    width: 29%;
+    height: 25.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.div-clientes{
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgba(21, 224, 156, 0.075);
-    gap: 30px;
-
-
 }
 
-.tit{
-    font-family: var(--fuentePrincipal);
-    font-size: 2em;    
-    color: var(--colorBlue);
-    -webkit-text-stroke-color: var(--colorPink);
-    -webkit-text-stroke-width: 0.01px;
-    text-shadow: 
-        1px 1px 2px black,
-        0 0 1em var(--colorGreen),
-        0 0 0.2em var(--colorGreen);
+.boton-clientes{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, rgba(17,171,202,1) 0%, rgba(17,171,202,1) 56%, rgba(219,17,219,1) 100%);
+    border: solid 1px rgba(17,171,202,1);
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.div-productos{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boton-productos{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, rgba(17,171,202,1) 0%, rgba(17,171,202,1) 56%, rgba(219,17,219,1) 100%);
+    border: solid 1px rgba(17,171,202,1);
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+button:hover{
+    transform: scale(1.03);
+    font-weight: 600;
+    color:white;
+    box-shadow: 2px 2px 6px var(--colorBlue);
+    cursor:pointer;
+
 }
 
 
