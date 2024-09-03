@@ -3,6 +3,6 @@
    <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
 </p>
 <h4 align="center">
-:construction: Práctica de Backend y Frontend :construction:
+:construction: Práctica de Backend y Frontend con Mondgo :construction:
 </h4>
 <br><br>
