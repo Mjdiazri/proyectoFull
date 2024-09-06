@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Estilo/styleIndex.css">
+    <link rel="stylesheet" href="./Estilo/styleLogin.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+        <div class="contenedor">
+            <div class="empresa">
+                <img src="./Estilo/imagenes/book-open-check.png" alt="Imagen libro">
+                <h3 class="brand">BOO<span>KEND</span></h3>
+            </div>
+            <div class="navegador">
+                <nav class="nav">
+                    <a class="logueo" href="./logueo.html">Login</a>
+                    <a class="registro" href="./register.html">Registrarse</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="row">
+              <form id="form-register" class="log">
+            
+                <div class="cont -correo">
+                  <label class="label-correo">Nombre</label>
+                  <input type="text" class="input-correo" id="name" placeholder="Ingrese su nombre" autofocus required>
+                </div>
+    
+                <div class="cont -password">
+                  <label  class="label-password">Correo electronico</label>
+                  <input type="email" class="input-password" id="email" placeholder="Ingrese su correo" required>
+                </div>  
+
+                <div class="cont -password">
+                    <label  class="label-password">Contraseña</label>
+                    <input type="password" class="input-password" id="password" placeholder="Ingrese una Contraseña" required>
+                  </div>  
+    
+                <div class="cont -boton">
+                    <input type="submit" value="Registrarse" class="boton">
+                </div>
+    
+              </form>
+              <p> Ya estas registrado? <a href="logueo.html"> Iniciar Sesion </a> </p>
+            </div>
+          </section>
+    </main>
+    <footer>
+        <p>Bookend &copy; Monica Jazmin Diaz 2024</p>
+    </footer>
+
+    <script src="./js/register.js"></script>
+</body>
+</html>

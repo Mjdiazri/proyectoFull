@@ -1,0 +1,44 @@
+.row{
+    width: auto;
+    height: 27em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em
+}
+
+.log{
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+    background-color:white;
+    border-radius: 15px;
+    border: solid purple 2px;
+    box-shadow: 1px 2px 20px purple ;
+    font-family: cursive;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    gap:1em
+}
+
+.boton{
+    background-color: white;
+    color: purple;
+    padding: 5px;
+    border: 1px purple solid;
+    border-radius: 3px;   
+    font-size: 0.8em;
+}
+
+.boton:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 2px 10px purple;
+    font-weight: 600;
+    background-color: purple;
+    color: white;
+
+}
