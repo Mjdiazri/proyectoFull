@@ -48,15 +48,23 @@ function guardarProductos(){
     let aut = document.getElementById('autor-a').value;
     let edi = document.getElementById('editorial-e').value;
     let can = document.getElementById('cantidad-c').value;
+    let idi = document.getElementById('productos-id').value;
   
-    let data = {'nombre':nomb, 'identificador': ide, 'autor': aut,'editorial': edi, 'cantidad': can};
+    let data = {'nombre':nomb, 'identificador': ide, 'autor': aut,'editorial': edi, 'cantidad': can, 'id':idi};
 
-    let request = sendRequest('productos/', 'POST', data);
+
+    let request = sendRequest('productos/'+idi, idi ? 'PATCH' : 'POST',data)
     request.onload = function(){
-        window.location= 'productos.html';
+        window.location= 'productos.html'
     }
-    request.onerror = function(){
-        alert('Error al guardar los datos')
+    
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 300) {
+            window.location = 'productos.html';
+        } else {
+            alert('Error al guardar los datos: ' + request.statusText);
+        }
+    
     }
 }
 
@@ -67,10 +75,12 @@ function cargarDatosP(id){
     let aut = document.getElementById('autor-a')
     let edi = document.getElementById('editorial-e')
     let can = document.getElementById('cantidad-c')
+    let idi = document.getElementById('productos-id')
 
     request.onload = function(){
-
         let data = request.response
+    
+        idi.value = data._id
         nomb.value = data.nombre
         ide.value = data.identificador
         aut.value = data.autor
@@ -84,20 +94,3 @@ function cargarDatosP(id){
     }
 }
 
-function modificarProductos(id){
-    let nomb = document.getElementById('nombre-n').value;
-    let ide = document.getElementById('identificador-i').value;
-    let aut = document.getElementById('autor-a').value;
-    let edi = document.getElementById('editorial-e').value;
-    let can = document.getElementById('cantidad-c').value;
-
-    let data = {'nombre':nomb, 'identificador': ide, 'autor': aut,'editorial': edi, 'cantidad': can};
-
-    let request = sendRequest('productos/'+id,'PATCH', data);
-    request.onload = function(){
-        window.location= 'productos.html';
-    }
-    request.onerror = function(){
-        alert('Error al guardar los datos')
-    }
-}

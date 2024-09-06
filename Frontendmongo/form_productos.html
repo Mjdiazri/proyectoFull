@@ -30,7 +30,10 @@
           <h2>Formulario <span>de</span> Productos</span></h2>
         </div>
         <div class="row">
-          <form action="" class="formulario" onsubmit="" method="POST">
+          <form id="form-productos" class="formulario" onsubmit="" method="POST">
+
+            <input type="hidden" id="productos-id">
+
             <div class="sub unop">
               <label for="nombre" class="fomulario-label">Nombre</label>
               <input type="text" class="fomulario-input" name="nombre-n" id="nombre-n">
@@ -58,7 +61,6 @@
 
             <div class="sub seisp">
             <button type="button" class="boton" onclick="guardarProductos()">Guardar</button>
-            <button type="button" id="btn-editarp" class="boton" onclick="editarProductos()">Editar</button>
             <button type="button" class="boton" onclick="window.location ='./productos.html'">Cancelar</button>
           </div>
 
@@ -72,17 +74,13 @@
 
   <script src="./js/request.js"></script>
   <script src="./js/productos.js"></script>
+
   <script>
     window.onload = function(){
-      let boton= document.getElementById('btn-editarp');
+        const url = new URLSearchParams(window.location.search);
 
-      const url = new URLSearchParams(window.location.search);        
+        if(url.get('id') != null)
         cargarDatosP(url.get('id'));
-      
-        boton.onclick=()=>{
-        modificarProductos(url.get('id'));
-      }    
-    
     }
   </script>
 

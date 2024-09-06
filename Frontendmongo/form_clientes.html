@@ -30,7 +30,10 @@
           <h2>Formulario <span>de</span> Clientes</span></h2>
         </div>
         <div class="row">
-          <form action="" class="formulario" onsubmit="" method="POST">
+          <form id="form-clientes" class="formulario" onsubmit="" method="POST">
+
+            <input type="hidden" id="clientes-id">
+
             <div class="sub uno">
               <label for="nombres" class="fomulario-label">Nombres</label>
               <input type="text" class="fomulario-input" name="nombres-n" id="nombres-n">
@@ -60,11 +63,13 @@
               <label for="direccion" class="fomulario-label">Direccion</label>
               <input type="text" class="fomulario-input" name="direccion-d" id="direccion-d">
             </div>
+
             <div class="sub siete">
               <button type="button" class="boton" onclick="guardarClientes()">Guardar</button>
-              <button type="button" class="boton" id="btn-editar">Editar</button>
+              <!--<button type="button" class="boton" id="btn-editar">Editar</button>-->
               <button type="button" class="boton" onclick="window.location='./clientes.html'">Cancelar</button>
             </div>
+
           </form>
         </div>
       </section>
@@ -78,15 +83,9 @@
 
   <script>
     window.onload = function(){
-      let boton= document.getElementById('btn-editar');
-
-      const url = new URLSearchParams(window.location.search);        
-        cargarDatos(url.get('id'));
-      
-        boton.onclick=()=>{
-        modificarClientes(url.get('id'));
-      }    
-    
+      const url = new URLSearchParams(window.location.search);
+      if(url.get('id') != null)
+      cargarDatos(url.get('id'));
     }
   </script>
 
