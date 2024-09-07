@@ -22,7 +22,7 @@
     background: linear-gradient(90deg, rgb(9, 16, 148) 7%, rgba(253,29,220,0.850577731092437) 56%, rgba(69,252,181,1) 82%);
     width: 100%;
     height: 8em;    
-    
+        
 }
 
 .empresa{
@@ -30,7 +30,7 @@
     flex-direction: row;
     justify-content:left;
     align-items: center;
-    padding-left: 2em;
+    padding-left: 1em;
     gap:10px;
 }
 
@@ -83,6 +83,15 @@ a:hover{
         1px 1px 2px black,
         0 0 1em var(--colorBlue),
         0 0 0.2em var(--colorBlue);
+}
+
+.logout{
+    padding: 0.3em;
+    width: 4.5em;
+    background-color: var(--colorDark);
+    color: var(--colorPink);
+    border: 1px solid white;
+    border-radius: 6px;
 }
 
 main{
